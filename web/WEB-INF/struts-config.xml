@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<!--
+     This is a blank Struts configuration file with an example
+     welcome action/page and other commented sample elements.
+
+     Tiles and the Struts Validator are configured using the factory defaults
+     and are ready-to-use.
+
+     NOTE: If you have a generator tool to create the corresponding Java classes
+     for you, you could include the details in the "form-bean" declarations.
+     Otherwise, you would only define the "form-bean" element itself, with the
+     corresponding "name" and "type" attributes, as shown here.
+-->
+
+<struts-config>
+        <!-- ==================================== Data Source Configuration -->
+    <data-sources>
+        <data-source type="org.apache.commons.dbcp.BasicDataSource">
+        <set-property
+            property="description"
+            value="CasselWeb Data Source"/>
+         <set-property
+            property="driverClassName"
+            value="org.gjt.mm.mysql.Driver"/>
+         <set-property
+            property="maxActive"
+            value="60"/>
+         <set-property
+            property="minActive"
+            value="5"/>
+         <set-property
+            property="url"
+            value="jdbc:mysql://localhost:3306/jmarkets2"/>
+         <set-property
+            property="username"
+            value="jmarkets2"/>
+        <set-property
+            property="password"
+            value="banana"/>
+        <set-property
+            property="maxWait"
+            value="5000" />
+        <set-property
+            property="defaultAutoCommit"
+            value="true" />
+        <set-property
+            property="defaultReadOnly"
+            value="false" />
+        <set-property
+              property="removeAbandoned"
+              value="true"/>
+        <set-property
+              property="removeAbandonedTimeout"
+              value="60"/>
+        <set-property
+              property="logAbandoned"
+              value="true"/>      
+        </data-source>
+    </data-sources>
+
+
+<!-- ======================================== Form Bean Definitions -->
+    <form-beans>
+        <form-bean
+            name="sessionConfigForm"
+            type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property
+                name="name"
+                type="java.lang.String"
+                initial=""
+            />
+            <form-property
+                name="numPeriods"
+                type="int"
+                initial="1"
+            />
+            <form-property
+                name="numSubjects"
+                type="int"
+                initial="2"
+            />
+            <form-property
+                name="numGroups"
+                type="int"
+                initial="1"
+            />
+            <form-property
+                name="timeoutLength"
+                type="int"
+                initial="30"
+            />
+            <form-property
+                name="sessionFile"
+                type="org.apache.struts.upload.FormFile"
+            />
+            <form-property
+                name="loadFromFile"
+                type="java.lang.Boolean"
+                initial="false"
+            />
+            <form-property
+                name="manualAdvance"
+                type="java.lang.Boolean"
+                initial="false"
+            />
+            <form-property
+                name="showPastOrders"
+                type="java.lang.Boolean"
+                initial="false"
+            />
+            <form-property
+                name="showPastTransactions"
+                type="java.lang.Boolean"
+                initial="false"
+            />
+        </form-bean>
+                
+        <form-bean
+            name="periodConfigForm"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.forms.PeriodConfigForm">
+        </form-bean>  
+        
+        <form-bean
+            name="saveConfigForm"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.forms.SaveConfigForm">
+        </form-bean>
+        
+        <form-bean
+            name="outputWriterForm"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.forms.OutputWriterForm">
+        </form-bean>
+        
+        <form-bean
+            name="terminateSessionForm"
+            type="org.apache.struts.validator.DynaValidatorForm">
+        </form-bean>
+        
+        <form-bean
+            name="expLoginForm"
+            type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property
+                name="email"
+                type="java.lang.String"
+            />
+            <form-property
+                name="password"
+                type="java.lang.String"
+            />                
+        </form-bean>
+        
+        <form-bean
+            name="clientLoginForm"
+            type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property
+                name="email"
+                type="java.lang.String"
+            />
+            <form-property
+                name="password"
+                type="java.lang.String"
+            />                
+        </form-bean>    
+        
+        <form-bean
+            name="clientRegForm"
+            type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property
+                name="email"
+                type="java.lang.String"
+            />
+            <form-property
+                name="fname"
+                type="java.lang.String"
+            />
+            <form-property
+                name="lname"
+                type="java.lang.String"
+            />
+            <form-property
+                name="phone"
+                type="java.lang.String"
+            />
+            <form-property
+                name="password"
+                type="java.lang.String"
+            />
+        </form-bean>
+        
+        <form-bean
+            name="expRegForm"
+            type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property
+                name="email"
+                type="java.lang.String"
+            />
+            <form-property
+                name="fname"
+                type="java.lang.String"
+            />
+            <form-property
+                name="lname"
+                type="java.lang.String"
+            />
+            <form-property
+                name="phone"
+                type="java.lang.String"
+            />
+            <form-property
+                name="school"
+                type="java.lang.String"
+            />
+            <form-property
+                name="password"
+                type="java.lang.String"
+            />
+        </form-bean>
+        
+        <form-bean
+            name="joinExpForm"
+            type="org.apache.struts.action.DynaActionForm">
+        </form-bean>
+                
+    </form-beans>
+
+<!-- ================================= Global Exception Definitions -->
+
+    <global-exceptions>
+    
+        <!-- sample exception handler
+        <exception
+            key="expired.password"
+            type="app.ExpiredPasswordException"
+            path="/changePassword.jsp"/>
+        end sample -->
+    
+    </global-exceptions>
+
+<!-- =================================== Global Forward Definitions -->
+
+    <global-forwards>
+        <forward   name="message_board" path="/MessageBoard"/>
+    </global-forwards>
+
+<!-- =================================== Action Mapping Definitions -->
+
+    <action-mappings>
+    
+       <!-- Log into the system as an experimenter -->
+        <action
+            path="/saveExpLogin"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.SaveExpLoginAction"
+            name="expLoginForm"
+            scope="request"
+            validate="true"
+            input="/ExpLogin">
+            <forward name="success" path="/ExpMenu"/>
+            <forward name="failure" path="/ExpLogin"/>
+        </action>
+        
+       <!-- Register as a new experimenter -->
+       <action
+            path="/saveExpReg"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.SaveExpRegAction"
+            name="expRegForm"
+            scope="request"
+            validate="true"
+            input="/ExpReg">
+            <forward name="success" path="/MessageBoard"/>
+            <forward name="failure" path="/ExpReg"/>
+       </action>
+        
+       <!-- Log into the system as a client -->
+       <action
+            path="/saveClientLogin"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.SaveClientLoginAction"
+            name="clientLoginForm"
+            scope="request"
+            validate="true"
+            input="/ClientLogin">
+            <forward name="success" path="/MessageBoard"/>
+            <forward name="failure" path="/ClientLogin"/>
+            <forward name="join" path="/editJoinExp.do"/>
+        </action>
+        
+        <!-- Register as a new client -->
+        <action
+            path="/saveClientReg"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.SaveClientRegAction"
+            name="clientRegForm"
+            scope="request"
+            validate="true"
+            input="/ClientReg">
+            <forward name="success" path="/MessageBoard"/>
+            <forward name="failure" path="/ClientReg"/>
+        </action>
+        
+       <!-- Client chooses an experiment to join -->
+        <action
+            path="/editJoinExp"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.EditJoinExpAction"
+            name="joinExpForm"
+            scope="request">
+            <forward name="login_fail" path="/ClientLogin"/>
+            <forward name="success" path="/JoinExp"/>
+        </action>
+       
+       <!-- Client joins an experiment -->
+       <action
+            path="/saveJoinExp"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.SaveJoinExpAction"
+            name="joinExpForm"
+            scope="request"
+            validate="true"
+            input="/JoinExp">
+            <forward name="success" path="/MessageBoard"/>
+        </action>
+        
+       <!-- Configure a new session -->
+        <action    
+            path="/editSessionConfig"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.EditSessionConfigAction"
+            name="sessionConfigForm"
+            scope="session"
+            validate="false">
+            <forward name="login_fail" path="/ExpLogin"/>
+            <forward name="success" path="/SessionConfig"/>
+        </action>
+    
+        <!-- Save the main session parameters, move onto configuring periods -->
+        <action    
+            path="/saveSessionConfig"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.SaveSessionConfigAction"
+            name="sessionConfigForm"
+            scope="session"
+            input="/SessionConfig">
+            <forward name="login_fail" path="/ExpLogin"/>
+            <forward name="success" path="/editPeriodMap.do"/>
+            <forward name="failure" path="/SessionConfig"/>
+        </action>
+        
+        <!-- Configure the number of securities and divisions in each period -->
+        <action 
+            path="/editPeriodMap"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.EditPeriodMapAction"
+            name="periodConfigForm"
+            scope="session">
+            <forward name="login_fail" path="/ExpLogin"/>
+            <forward name="success" path="/PeriodMap"/>
+        </action>
+  
+        <!-- Save the number of securities and divisions in each period, move on to configuring the first period -->
+        <action 
+            path="/savePeriodMap"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.SavePeriodMapAction"
+            name="periodConfigForm"
+            scope="session"
+            input="/PeriodMap">
+            <forward name="login_fail" path="/ExpLogin"/>
+            <forward name="success" path="/PeriodConfig"/>
+        </action>
+         
+         <!-- Save the properties of a single period and move to the next one -->
+         <action 
+            path="/savePeriodConfig"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.SavePeriodConfigAction"
+            name="periodConfigForm"
+            scope="session"
+            validate="false"
+            input="/PeriodConfig"
+            parameter="method">
+            <forward name="login_fail" path="/ExpLogin"/>
+            <forward name="save" path="/editSaveSessionConfig.do"/>
+            <forward name="success" path="/PeriodConfig"/>
+            <forward name="finished" path="/MonitorSession"/>
+        </action>
+        
+        <!-- Store the relative save path into the saveSessionConfigForm -->
+        <action 
+            path="/editSaveSessionConfig"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.EditSaveConfigAction"
+            name="saveConfigForm"
+            scope="session"
+            validate="false">
+            <forward name="success" path="/SaveConfig"/>
+        </action>
+        
+        <!-- Return to the period config screen after visiting the save page -->
+        <action
+            path="/saveSaveConfig"
+            name="saveConfigForm"
+            scope="session"
+            forward="/PeriodConfig">
+        </action>
+        
+        <!-- Terminate the current session and move to the MessageBoard -->
+        <action
+            path="/terminateSession"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.TerminateSessionAction"
+            name="terminateSessionForm"
+            scope="request">
+            <forward name="login_fail" path="/ExpLogin"/>
+            <forward name="success" path="/MessageBoard"/>
+         </action>
+         
+        <!-- Get the session id number entered and generate a save output file page -->
+        <action    
+            path="/editOutputWriter"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.EditOutputWriterAction"
+            name="outputWriterForm"
+            scope="session"
+            validate="false">
+            <forward name="success" path="/OutputWriter"/>
+            <forward name="failure" path="/ErrorPage"/>
+        </action>
+        
+        <action    
+            path="/saveOutputWriter"
+            type="edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions.SaveOutputWriterAction"
+            name="outputWriterForm"
+            scope="session"
+            input="/OutputWriter">
+            <forward name="login_fail" path="/ExpLogin"/>
+            <forward name="failure" path="/OutputWriter"/>
+            <forward name="success" path="/SaveOutput"/>
+        </action>
+        
+        <!-- Return to the output writer screen after visiting the save page -->
+        <action
+            path="/saveSaveOutput"
+            name="outputWriterForm"
+            scope="session"
+            forward="/OutputWriter">
+        </action>
+                
+    </action-mappings>
+
+<!-- ===================================== Controller Configuration -->
+
+    <controller
+       processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+<!-- ================================ Message Resources Definitions -->
+
+    <message-resources parameter="resources.ApplicationResources"/>
+
+<!-- ======================================= Plug Ins Configuration -->
+
+  <!-- ========== Tiles plugin ===================  -->
+  <!--												-->
+  <!--
+     This plugin initialize Tiles definition factory. This later can takes some
+	 parameters explained here after. The plugin first read parameters from web.xml, then
+	 overload them with parameters defined here. All parameters are optional.
+	 The plugin should be declared in each struts-config file.
+       - definitions-config: (optional) 
+            Specify configuration file names. There can be several comma 
+		    separated file names (default: ?? )
+       - moduleAware: (optional - struts1.1) 
+            Specify if the Tiles definition factory is module aware. If true (default), 
+			there will be one factory for each Struts module. 
+			If false, there will be one common factory for all module. In this later case, 
+			it is still needed to declare one plugin per module. The factory will be 
+			initialized with parameters found in the first initialized plugin (generally the
+			one associated with the default module).
+			  true : One factory per module. (default)
+			  false : one single shared factory for all modules
+	   - definitions-parser-validate: (optional)
+	        Specify if xml parser should validate the Tiles configuration file.
+			  true : validate. DTD should be specified in file header. (default)
+			  false : no validation
+			  
+	  Paths found in Tiles definitions are relative to the main context.
+  -->
+  <!-- comment following if struts1.0.x -->
+  <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+    <set-property property="definitions-config" 
+	                 value="/WEB-INF/tiles-defs.xml" />
+    <set-property property="moduleAware" value="true" />
+    <set-property property="definitions-parser-validate" value="true" />
+  </plug-in>
+
+  <!-- end comment if struts1.0.x -->
+
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames"
+                  value="/WEB-INF/validator-rules.xml, /WEB-INF/validation.xml"/>
+  </plug-in>
+  <!--
+  <plug-in className="edu.caltechUcla.sselCassel.projects.casselWeb.web.plugins.EmailPlugIn">
+    <set-property property="pathname" value="/WEB-INF/email.properties"/>
+  </plug-in>-->
+
+</struts-config>

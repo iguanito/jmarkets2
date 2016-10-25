@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+    <display-name>Servlet 2.4</display-name>
+    <description>
+        Servlet 2.4.
+    </description>
+    
+    <servlet>   
+        <servlet-name>action</servlet-name> 
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class> 
+        <init-param>
+            <param-name>definitions-config</param-name> 
+            <param-value>/WEB-INF/tiles-defs.xml</param-value> 
+        </init-param>
+        <init-param>
+            <param-name>config</param-name> 
+            <param-value>/WEB-INF/struts-config.xml</param-value> 
+        </init-param>
+        <init-param>
+            <param-name>debug</param-name> 
+            <param-value>2</param-value> 
+        </init-param>
+        <init-param>
+            <param-name>detail</param-name> 
+            <param-value>2</param-value> 
+        </init-param>
+        <load-on-startup>2</load-on-startup> 
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ServletReceiver</servlet-name>
+        <servlet-class>edu.caltechUcla.sselCassel.projects.jMarkets.server.network.ServletReceiver</servlet-class>
+        <init-param>
+            <param-name>properties</param-name>
+            <param-value>/WEB-INF/classes/jmarkets.properties</param-value>
+        </init-param>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+ 
+    <servlet>
+        <servlet-name>SessionConfigJSP</servlet-name> 
+        <jsp-file>/jsp/experimenter/SessionConfigForm.jsp</jsp-file> 
+    </servlet>
+    
+    <servlet>
+        <servlet-name>PeriodMapJSP</servlet-name>
+        <jsp-file>/jsp/experimenter/PeriodMapForm.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>PeriodConfigJSP</servlet-name>
+        <jsp-file>/jsp/experimenter/PeriodConfigForm.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>SaveConfigJSP</servlet-name>
+        <jsp-file>/jsp/experimenter/SaveConfigForm.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>SaveOutputJSP</servlet-name>
+        <jsp-file>/jsp/experimenter/SaveOutputForm.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>OutputWriterJSP</servlet-name>
+        <jsp-file>/jsp/experimenter/OutputWriterForm.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>MonitorSessionJSP</servlet-name>
+        <jsp-file>/jsp/experimenter/jMarketServer.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>MessageBoardJSP</servlet-name> 
+        <jsp-file>/jsp/common/MessageBoard.jsp</jsp-file> 
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ExpLoginJSP</servlet-name>
+        <jsp-file>/jsp/experimenter/ExpLoginForm.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ExpRegJSP</servlet-name>
+        <jsp-file>/jsp/experimenter/ExpRegForm.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ClientLoginJSP</servlet-name>
+        <jsp-file>/jsp/client/ClientLoginForm.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ClientRegJSP</servlet-name>
+        <jsp-file>/jsp/client/ClientRegForm.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>WelcomeJSP</servlet-name>
+        <jsp-file>/jsp/common/Welcome.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ExpMenuJSP</servlet-name>
+        <jsp-file>/jsp/experimenter/ExpMenu.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>AboutJSP</servlet-name>
+        <jsp-file>/jsp/common/About.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>JoinExpJSP</servlet-name>
+        <jsp-file>/jsp/client/jMarketClient.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ErrorPageJSP</servlet-name>
+        <jsp-file>/jsp/common/ErrorPage.jsp</jsp-file>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ServletReceiver</servlet-name>
+        <url-pattern>/servlet/ServletReceiver</url-pattern>
+    </servlet-mapping>
+   
+    <servlet-mapping>
+        <servlet-name>SessionConfigJSP</servlet-name>
+        <url-pattern>/SessionConfig</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>PeriodMapJSP</servlet-name>
+        <url-pattern>/PeriodMap</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>PeriodConfigJSP</servlet-name>
+        <url-pattern>/PeriodConfig</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SaveConfigJSP</servlet-name>
+        <url-pattern>/SaveConfig</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SaveOutputJSP</servlet-name>
+        <url-pattern>/SaveOutput</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>OutputWriterJSP</servlet-name>
+        <url-pattern>/OutputWriter</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>MonitorSessionJSP</servlet-name>
+        <url-pattern>/MonitorSession</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>MessageBoardJSP</servlet-name> 
+        <url-pattern>/MessageBoard</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ExpLoginJSP</servlet-name>
+        <url-pattern>/ExpLogin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ExpRegJSP</servlet-name>
+        <url-pattern>/ExpReg</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ClientLoginJSP</servlet-name>
+        <url-pattern>/ClientLogin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ClientRegJSP</servlet-name>
+        <url-pattern>/ClientReg</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>WelcomeJSP</servlet-name>
+        <url-pattern>/Welcome</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ExpMenuJSP</servlet-name>
+        <url-pattern>/ExpMenu</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>AboutJSP</servlet-name>
+        <url-pattern>/About</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>JoinExpJSP</servlet-name>
+        <url-pattern>/JoinExp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>action</servlet-name> 
+        <url-pattern>*.do</url-pattern> 
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ErrorPageJSP</servlet-name>
+        <url-pattern>/ErrorPage</url-pattern>
+    </servlet-mapping>
+    
+
+    <error-page>
+        <exception-type>Exception</exception-type>
+        <location>/ErrorPage</location>
+    </error-page>
+
+</web-app>

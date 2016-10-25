@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>  
+    <definition name="public.basiclayout" path="/jsp/layout/basic_layout.jsp">
+        <put name="header" value="/jsp/client/header.jsp"/>
+        <put name="footer" value="/jsp/client/footer.jsp"/>  
+        <put name="exper_header" value="/jsp/experimenter/header.jsp"/>
+        <put name="exper_footer" value="/jsp/experimenter/footer.jsp"/>  
+    </definition>
+    
+    <definition name=".errorpage" extends="public.basiclayout">
+        <put name="title" value="jMarkets Error Page"/>
+        <put name="content"   value="/jsp/common/error_page.jsp" />
+    </definition>
+    
+    <definition name=".messageboard" extends="public.basiclayout">
+        <put name="title" value="jMarkets Message Board"/>
+        <put name="content"   value="/jsp/common/message_board.jsp" />
+    </definition>
+    
+    <definition name=".welcome" extends="public.basiclayout">
+        <put name="title" value="jMarkets Main Page"/>
+        <put name="content"   value="/jsp/common/welcome_page.jsp" />
+    </definition>    
+    
+    <definition name=".expmenu" extends="public.basiclayout">
+        <put name="title" value="jMarkets Experimenter Menu"/>
+        <put name="content"   value="/jsp/experimenter/exp_menu.jsp" />
+    </definition>  
+    
+    <definition name=".about" extends="public.basiclayout">
+        <put name="title" value="About jMarkets Page"/>
+        <put name="content"   value="/jsp/common/about_page.jsp" />
+    </definition> 
+    
+    <definition name=".sessionconfig" extends="public.basiclayout">
+        <put name="title" value="jMarkets Session Configuration Page"/>
+        <put name="content"   value="/jsp/forms/sessionConfig_form.jsp" />
+    </definition>
+    
+    <definition name=".outputwriter" extends="public.basiclayout">
+        <put name="title" value="jMarkets Output Writer Page"/>
+        <put name="content"   value="/jsp/forms/outputWriter_form.jsp" />
+    </definition>   
+    
+    <definition name=".periodmap" extends="public.basiclayout">
+        <put name="title" value="jMarkets Period Map Page"/>
+        <put name="content" value="/jsp/forms/periodMap_form.jsp"/>
+    </definition>
+    
+    <definition name=".periodconfig" extends="public.basiclayout">
+        <put name="title" value="jMarkets Period Configuration Page"/>
+        <put name="content" value="/jsp/forms/periodConfig_form.jsp"/>
+    </definition>
+    
+    <definition name=".saveconfig" extends="public.basiclayout">
+        <put name="title" value="jMarkets Save Session Page"/>
+        <put name="content" value="/jsp/forms/saveConfig_form.jsp"/>
+    </definition>
+    
+    <definition name=".saveoutput" extends="public.basiclayout">
+        <put name="title" value="jMarkets Save Output Page"/>
+        <put name="content" value="/jsp/forms/saveOutput_form.jsp"/>
+    </definition>
+    
+    <definition name=".explogin" extends="public.basiclayout">
+        <put name="title" value="jMarkets Experimenter Login Page"/>
+        <put name="content" value="/jsp/forms/expLogin_form.jsp"/>
+    </definition>    
+    
+    <definition name=".expreg" extends="public.basiclayout">
+        <put name="title" value="jMarkets Experimenter Registration Page"/>
+        <put name="content" value="/jsp/forms/expReg_form.jsp"/>
+    </definition> 
+    
+    <definition name=".clientlogin" extends="public.basiclayout">
+        <put name="title" value="jMarkets Client Login Page"/>
+        <put name="content" value="/jsp/forms/clientLogin_form.jsp"/>
+    </definition>   
+    
+    <definition name=".clientreg" extends="public.basiclayout">
+        <put name="title" value="jMarkets Client Registration Page"/>
+        <put name="content" value="/jsp/forms/clientReg_form.jsp"/>
+    </definition>   
+   
+</tiles-definitions>

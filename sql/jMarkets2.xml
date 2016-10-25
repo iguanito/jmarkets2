@@ -1,0 +1,1155 @@
+<?xml version="1.0" standalone="yes" ?>
+<DBMODEL Version="4.0">
+<SETTINGS>
+<GLOBALSETTINGS ModelName="jMarkets2" IDModel="0" IDVersion="0" VersionStr="1.0.0.0" Comments="" UseVersionHistroy="1" AutoIncVersion="1" DatabaseType="MySQL" ZoomFac="75.00" XPos="0" YPos="0" DefaultDataType="5" DefaultTablePrefix="0" DefSaveDBConn="" DefSyncDBConn="" DefQueryDBConn="" Printer="HP LaserJet 4050 Series PS" HPageCount="4.0" PageAspectRatio="1.428451355326749" PageOrientation="0" PageFormat="A4 (210x297 mm, 8.26x11.7 inches)" SelectedPages="0" UsePositionGrid="0" PositionGridX="20" PositionGridY="20" TableNameInRefs="1" DefaultTableType="1" ActivateRefDefForNewRelations="1" FKPrefix="" FKPostfix="" CreateFKRefDefIndex="1" DBQuoteCharacter="`" CreateSQLforLinkedObjects="0" DefModelFont="Tahoma" CanvasWidth="4096" CanvasHeight="2842" />
+<DATATYPEGROUPS>
+<DATATYPEGROUP Name="Numeric Types" Icon="1" />
+<DATATYPEGROUP Name="Date and Time Types" Icon="2" />
+<DATATYPEGROUP Name="String Types" Icon="3" />
+<DATATYPEGROUP Name="Blob and Text Types" Icon="4" />
+<DATATYPEGROUP Name="User defined Types" Icon="5" />
+<DATATYPEGROUP Name="Geographic Types" Icon="6" />
+</DATATYPEGROUPS>
+<DATATYPES>
+<DATATYPE ID="1" IDGroup="0" TypeName="TINYINT" Description="A very small integer. The signed range is -128 to 127. The unsigned range is 0 to 255." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="1" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="2" IDGroup="0" TypeName="SMALLINT" Description="A small integer. The signed range is -32768 to 32767. The unsigned range is 0 to 65535." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="1" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="3" IDGroup="0" TypeName="MEDIUMINT" Description="A medium-size integer. The signed range is -8388608 to 8388607. The unsigned range is 0 to 16777215." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="1" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="4" IDGroup="0" TypeName="INT" Description="A normal-size integer. The signed range is -2147483648 to 2147483647. The unsigned range is 0 to 4294967295." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="1" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="0" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="5" IDGroup="0" TypeName="INTEGER" Description="A normal-size integer. The signed range is -2147483648 to 2147483647. The unsigned range is 0 to 4294967295." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="1" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="1" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="6" IDGroup="0" TypeName="BIGINT" Description="A large integer. The signed range is -9223372036854775808 to 9223372036854775807. The unsigned range is 0 to 18446744073709551615." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="0" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="7" IDGroup="0" TypeName="FLOAT" Description="A small (single-precision) floating-point number. Cannot be unsigned. Allowable values are -3.402823466E+38 to -1.175494351E-38, 0, and 1.175494351E-38 to 3.402823466E+38." ParamCount="1" OptionCount="1" ParamRequired="1" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="precision" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="8" IDGroup="0" TypeName="FLOAT" Description="A small (single-precision) floating-point number. Cannot be unsigned. Allowable values are -3.402823466E+38 to -1.175494351E-38, 0, and 1.175494351E-38 to 3.402823466E+38." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="9" IDGroup="0" TypeName="DOUBLE" Description="A normal-size (double-precision) floating-point number. Cannot be unsigned. Allowable values are -1.7976931348623157E+308 to -2.2250738585072014E-308, 0, and 2.2250738585072014E-308 to 1.7976931348623157E+308." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="2" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="10" IDGroup="0" TypeName="DOUBLE PRECISION" Description="This is a synonym for DOUBLE." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="2" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="11" IDGroup="0" TypeName="REAL" Description="This is a synonym for DOUBLE." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="2" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="12" IDGroup="0" TypeName="DECIMAL" Description="An unpacked floating-point number. Cannot be unsigned. Behaves like a CHAR column." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="3" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="13" IDGroup="0" TypeName="NUMERIC" Description="This is a synonym for DECIMAL." ParamCount="2" OptionCount="1" ParamRequired="1" EditParamsAsString="0" SynonymGroup="3" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="14" IDGroup="1" TypeName="DATE" Description="A date. The supported range is \a1000-01-01\a to \a9999-12-31\a." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="15" IDGroup="1" TypeName="DATETIME" Description="A date and time combination. The supported range is \a1000-01-01 00:00:00\a to \a9999-12-31 23:59:59\a." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="16" IDGroup="1" TypeName="TIMESTAMP" Description="A timestamp. The range is \a1970-01-01 00:00:00\a to sometime in the year 2037. The length can be 14 (or missing), 12, 10, 8, 6, 4, or 2 representing YYYYMMDDHHMMSS, ... , YYYYMMDD, ... , YY formats." ParamCount="1" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+</DATATYPE>
+<DATATYPE ID="17" IDGroup="1" TypeName="TIME" Description="A time. The range is \a-838:59:59\a to \a838:59:59\a." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="18" IDGroup="1" TypeName="YEAR" Description="A year in 2- or 4-digit format (default is 4-digit)." ParamCount="1" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+</DATATYPE>
+<DATATYPE ID="19" IDGroup="2" TypeName="CHAR" Description="A fixed-length string (1 to 255 characters) that is always right-padded with spaces to the specified length when stored. values are sorted and compared in case-insensitive fashion according to the default character set unless the BINARY keyword is given." ParamCount="1" OptionCount="1" ParamRequired="1" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="20" IDGroup="2" TypeName="VARCHAR" Description="A variable-length string (1 to 255 characters). Values are sorted and compared in case-sensitive fashion unless the BINARY keyword is given." ParamCount="1" OptionCount="1" ParamRequired="1" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="21" IDGroup="2" TypeName="BIT" Description="This is a synonym for CHAR(1)." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="22" IDGroup="2" TypeName="BOOL" Description="This is a synonym for CHAR(1)." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="23" IDGroup="3" TypeName="TINYBLOB" Description="A column maximum length of 255 (2^8 - 1) characters. Values are sorted and compared in case-sensitive fashion." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="24" IDGroup="3" TypeName="BLOB" Description="A column maximum length of 65535 (2^16 - 1) characters. Values are sorted and compared in case-sensitive fashion." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="25" IDGroup="3" TypeName="MEDIUMBLOB" Description="A column maximum length of 16777215 (2^24 - 1) characters. Values are sorted and compared in case-sensitive fashion." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="26" IDGroup="3" TypeName="LONGBLOB" Description="A column maximum length of 4294967295 (2^32 - 1) characters. Values are sorted and compared in case-sensitive fashion." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="27" IDGroup="3" TypeName="TINYTEXT" Description="A column maximum length of 255 (2^8 - 1) characters." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="28" IDGroup="3" TypeName="TEXT" Description="A column maximum length of 65535 (2^16 - 1) characters." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="29" IDGroup="3" TypeName="MEDIUMTEXT" Description="A column maximum length of 16777215 (2^24 - 1) characters." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="30" IDGroup="3" TypeName="LONGTEXT" Description="A column maximum length of 4294967295 (2^32 - 1) characters." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="31" IDGroup="3" TypeName="ENUM" Description="An enumeration. A string object that can have only one value, chosen from the list of values." ParamCount="1" OptionCount="0" ParamRequired="1" EditParamsAsString="1" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="values" />
+</PARAMS>
+</DATATYPE>
+<DATATYPE ID="32" IDGroup="3" TypeName="SET" Description="A set. A string object that can have zero or more values, each of which must be chosen from the list of values." ParamCount="1" OptionCount="0" ParamRequired="1" EditParamsAsString="1" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="values" />
+</PARAMS>
+</DATATYPE>
+<DATATYPE ID="33" IDGroup="4" TypeName="Varchar(20)" Description="" ParamCount="0" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="34" IDGroup="4" TypeName="Varchar(45)" Description="" ParamCount="0" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="35" IDGroup="4" TypeName="Varchar(255)" Description="" ParamCount="0" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="36" IDGroup="5" TypeName="GEOMETRY" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="38" IDGroup="5" TypeName="LINESTRING" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="39" IDGroup="5" TypeName="POLYGON" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="40" IDGroup="5" TypeName="MULTIPOINT" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="41" IDGroup="5" TypeName="MULTILINESTRING" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="42" IDGroup="5" TypeName="MULTIPOLYGON" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="43" IDGroup="5" TypeName="GEOMETRYCOLLECTION" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+</DATATYPES>
+<COMMON_DATATYPES>
+<COMMON_DATATYPE ID="5" />
+<COMMON_DATATYPE ID="8" />
+<COMMON_DATATYPE ID="20" />
+<COMMON_DATATYPE ID="15" />
+<COMMON_DATATYPE ID="22" />
+<COMMON_DATATYPE ID="28" />
+<COMMON_DATATYPE ID="26" />
+<COMMON_DATATYPE ID="33" />
+<COMMON_DATATYPE ID="34" />
+<COMMON_DATATYPE ID="35" />
+</COMMON_DATATYPES>
+<TABLEPREFIXES>
+<TABLEPREFIX Name="Default (no prefix)" />
+</TABLEPREFIXES>
+<REGIONCOLORS>
+<REGIONCOLOR Color="Red=#FFEEEC" />
+<REGIONCOLOR Color="Yellow=#FEFDED" />
+<REGIONCOLOR Color="Green=#EAFFE5" />
+<REGIONCOLOR Color="Cyan=#ECFDFF" />
+<REGIONCOLOR Color="Blue=#F0F1FE" />
+<REGIONCOLOR Color="Magenta=#FFEBFA" />
+</REGIONCOLORS>
+<POSITIONMARKERS>
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+</POSITIONMARKERS>
+</SETTINGS>
+<METADATA>
+<REGIONS>
+</REGIONS>
+<TABLES>
+<TABLE ID="1354" Tablename="jm_user" PrevTableName="Table_01" XPos="20" YPos="241" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="Table: subjects. Identification includes the following variables: email, fname (first name), lname (last name), phone, passwd (password for a subject to log into the experiment web site, access personal data, and trade), comments, regdate (registration time), uid (universal ID, such as social security number). The valid bit indicates whether the status of a subject in the system. If false, we no longer use this subject for experiments. " Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="2" >
+<COLUMNS>
+<COLUMN ID="1356" ColName="id" PrevColName="" Pos="0" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1363" ColName="email" PrevColName="" Pos="5" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1358" ColName="fname" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(20)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1360" ColName="lname" PrevColName="" Pos="2" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1362" ColName="phone" PrevColName="" Pos="4" idDatatype="20" DatatypeParams="(20)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1364" ColName="passwd" PrevColName="" Pos="6" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1365" ColName="comments" PrevColName="" Pos="7" idDatatype="20" DatatypeParams="(255)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1366" ColName="regdate" PrevColName="" Pos="8" idDatatype="14" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1608" ColName="uid" PrevColName="school_id" Pos="10" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="Student\as School ID (unique) (optional)">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1420" ColName="valid" PrevColName="" Pos="10" idDatatype="1" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="0" Comments="0=valid; 1=invalid">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3116" ColName="role" PrevColName="" Pos="10" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="100=user; 200=experimenter">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="3192" />
+<RELATION_START ID="3202" />
+<RELATION_START ID="3222" />
+<RELATION_START ID="3281" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="1357" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1356" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1367" IndexName="subjects_email" IndexKind="2" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1363" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1368" IndexName="subjects_name" IndexKind="1" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1360" LengthParam="0" />
+<INDEXCOLUMN idColumn="1358" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1617" Tablename="period" PrevTableName="Table_03" XPos="516" YPos="37" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="A row in the Periods table encapsulates definition of a period. Basically, a period is an interval of time that subjects will be active - this may be limited to waiting for earnings, but usually involves trade in securities. For each period, one declares the total length in time that it lasts (time_length). A period can be set to be active after some time delay (time_delay). Unlike timeout_length in the table \Asessions\A, this delay is period-specific.  " Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="3" >
+<COLUMNS>
+<COLUMN ID="1619" ColName="id" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3178" ColName="session_instance_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3138" ColName="period_num" PrevColName="" Pos="5" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1682" ColName="duration" PrevColName="time_open" Pos="2" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="In milliseconds, how long the period should be open. It should be \g= to the max length of the market for each of the securities.">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2361" ColName="open_delay" PrevColName="time_delay" Pos="7" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="0" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3136" ColName="start_time" PrevColName="" Pos="3" idDatatype="15" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3137" ColName="end_time" PrevColName="" Pos="4" idDatatype="15" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="3184" />
+<RELATION_START ID="3198" />
+<RELATION_START ID="3211" />
+<RELATION_START ID="3218" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="3177" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1987" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1619" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3179" IndexName="period_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3177">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3178" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1636" Tablename="market" PrevTableName="Table_03" XPos="261" YPos="340" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="Assigns names to securities. " Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="4" >
+<COLUMNS>
+<COLUMN ID="1637" ColName="id" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3245" ColName="session_instance_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1639" ColName="name" PrevColName="security_name" Pos="3" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="3180" />
+<RELATION_START ID="3189" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="3167" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1645" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1637" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3246" IndexName="market_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3167">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3245" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1655" Tablename="period_market" PrevTableName="Table_06" XPos="533" YPos="456" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="This table encapsulates the securities available for a given period in a session. The following has to be specified: minimum price level (min_price), maximum price level (max_price), tick size (tick_price), a security-specific delay before opening of the markets (time_delay_s), and the length of time that exchange in the security can take place (time_length_s; obviously, time_length_s \k= time_length minus time_delay_s, where time_length is in the table \Aperiods\A). Two variables determine whether securities are linked across periods. When the end-of-period holdings of a security should be added to the initial holdings of the security with the same ID (Variable: security_id) in the subsequent period, then the Variable add_surplus should be set equal to 1; otherwise, it\as zero, in which case subjects are paid the dividend and the the securities leave the system. When end-of-period dividends are paid, two things can happen. To understand these, it\as important to distinguish between, (i) the cumulative payoffs that subjects earn across periods and which are to be converted from the experiment currency to dollars and eventually paid to subjects at the end of the session (see Table: subject_payoffs), and (ii) cash holdings that subjects can use in a period to buy securities (see Table: subject_cash_holdings). When the end-of-period payment (dividend) of a security is NOT to be added to subjects\a cumulative payoffs but instead is to be added to subjects\a cash holdings for the subsequent period, then one sets the Variable: add_dividend to 1; otherwise it is 0.\n\nThe conversion function governs how payoff for this security should be converted to actual dollar amount payoff to the subject wheras the payoff function specifies how the payoffs should be calculated for this security in the period. " Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="5" >
+<COLUMNS>
+<COLUMN ID="2010" ColName="id" PrevColName="" Pos="7" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3185" ColName="period_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3181" ColName="market_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1704" ColName="price_increment" PrevColName="tick_price" Pos="3" idDatatype="9" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="Price increments. ">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1728" ColName="min_price" PrevColName="" Pos="4" idDatatype="9" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="Max unit price for the security">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1729" ColName="max_price" PrevColName="" Pos="5" idDatatype="9" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="Min unit price for the security">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1772" ColName="duration" PrevColName="time_length" Pos="5" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="Time length of availability for trading of this security">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2792" ColName="open_delay" PrevColName="time_delay_s" Pos="10" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="Time delay before trade in security opens, counting from beginning of period on">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3148" ColName="start_time" PrevColName="" Pos="6" idDatatype="15" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3149" ColName="end_time" PrevColName="" Pos="7" idDatatype="15" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="3231" />
+<RELATION_START ID="3247" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="3180" />
+<RELATION_END ID="3184" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="2012" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="2010" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3183" IndexName="period_market_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3180">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3181" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3186" IndexName="period_market_FKIndex2" IndexKind="1" FKRefDef_Obj_id="3184">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3185" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1709" Tablename="period_group_market_rule" PrevTableName="Table_09" XPos="743" YPos="919" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="Rules specific to each security and each period are specified in this table. Rules may depend on the role a subejct plays (see role_id). At this point, there are two rules to be specified: trading_rule and shortsale_constraint. \n\nExplanation of rules:\n- trading_rule equals -1 if subject is only allowed to sell, 1 if she is only allowed to buy, 2 if she is allowed to do both, and 0 if she is not allowed to trade in the indicated period_security.\n- shortsale-constraint equals number of units of period_security that can be sold without owning it. This determines the number of units of a security somebody can sell without owning any. Upon a short sale, the subject promises to \npay the experimenter at the end of a period (and possibly future periods if security holdings are carried over - \nsee add_surplus above) whatever dividend the security pays." Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="7" >
+<COLUMNS>
+<COLUMN ID="3235" ColName="period_group_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3232" ColName="period_market_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3158" ColName="market_role" PrevColName="" Pos="3" idDatatype="20" DatatypeParams="(20)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1795" ColName="shortsale_constraint" PrevColName="" Pos="4" idDatatype="7" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2921" ColName="add_surplus" PrevColName="" Pos="3" idDatatype="1" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2922" ColName="add_dividend" PrevColName="" Pos="4" idDatatype="1" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="3231" />
+<RELATION_END ID="3234" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="3237" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3235" LengthParam="0" />
+<INDEXCOLUMN idColumn="3232" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3233" IndexName="period_group_market_rule_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3231">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3232" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3236" IndexName="period_group_market_rule_FKIndex2" IndexKind="1" FKRefDef_Obj_id="3234">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3235" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1755" Tablename="session_instance" PrevTableName="Table_13" XPos="252" YPos="56" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="Top level data object. It defines experimental session which contain a number of periods, separated by some idle time (Variable: timeout_length). (Note: timeout_length differs from time_delay in the table \Aperiods\A in that it is fixed per period.) An experiment can contain one or more sessions. The experimenter can configure a session and save it as a template (is_template). When a session definition is marked as a template, it can then be used as a source to clone new session definitions. The idea here is to eventually have an admin interface from which a list of session definitions can be chosen by an experimenter.  " Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="8" >
+<COLUMNS>
+<COLUMN ID="1757" ColName="id" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3165" ColName="session_def_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1759" ColName="num_traders" PrevColName="num_of_markets" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1763" ColName="open_delay" PrevColName="timeout_length" Pos="2" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="Delay before session starts">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3133" ColName="start_time" PrevColName="" Pos="4" idDatatype="15" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2928" ColName="end_time" PrevColName="name" Pos="4" idDatatype="15" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="3177" />
+<RELATION_START ID="3167" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="3162" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="2692" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1757" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3164" IndexName="session_instance_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3162">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3165" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1820" Tablename="order_book" PrevTableName="Table_17" XPos="752" YPos="516" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="Exchange takes place through a system referred to as open book. Subjects can submit buy (bids) or sell (asks) limit orders. Each order is for a specified number of units and a specified maximum (bid) or minimum (asks) price. Bids and asks are displayed in decreasing order of price; this list is referred to as the book. When a buy limit order specifies a maximum bid price that is at least as high as the lowest ask price in the book, then a purchase occurs: the bidder buys from the seller whose ask is the lowest (price priority) and has been in the system - at that price level - the longest (time priority). If the bidder wanted to buy more units that this seller provides, then the additional units come from other sellers in the queue at the minimum ask price. Again, time priority is adhered to (first seller in gets to sell first). If that is still not sufficient, the system checks the next available ask price level, provided that it is not above the (limit) bid price of the buyer. And so on. If part of the buy order remains unfilled when all limit sell orders below or equal to the bid price of the buyer are used up, then the buy order is posted in the book (at its bid price level). An analogous set of rules applies to sell orders.\n\nThe book is represented in the database as follows. For each security and each price level (see Table: security_pricelevels), the Table: offer_book lists the limit orders. A limit order is defined by Variable: offer_type (bid/buy or ask/sale), Variable: offer_units (number of units bought/sold), Variable: time_entry (time the order arrived in the book), Variable: offer_status (whether the order is active, canceled, or executed; when or order arrives, it is automatically active), and Variable: time_changestatus (time when the status changed from active to either canceled or executed). Transactions are recorded in the Table: transaction_book (number of units Variable: units and transaction time Variable: time_entry are recorded), which links to a Table: transaction_parties, which lists the parties (Variable: subject_id) and their role (Variable: role_id). The latter (i.e., the roles) are defined in the Table: transaction_roles (Variable: role_name).\n" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="10" >
+<COLUMNS>
+<COLUMN ID="1839" ColName="id" PrevColName="" Pos="5" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3284" ColName="user_id" PrevColName="" Pos="1" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3248" ColName="period_market_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1824" ColName="order_type" PrevColName="offer_type" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1825" ColName="order_size" PrevColName="offer_units" Pos="2" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3143" ColName="entry_type" PrevColName="" Pos="6" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="standing | market">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1826" ColName="time_entry" PrevColName="" Pos="3" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1889" ColName="order_status" PrevColName="offer_status" Pos="6" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="0" Comments="Accepted, Canceled, Pending">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1899" ColName="last_change_time" PrevColName="time_changestatus" Pos="7" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="Timestamp when status changes to either cancelation or accepted">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="3238" />
+<RELATION_START ID="3253" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="3247" />
+<RELATION_END ID="3281" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1840" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1839" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3249" IndexName="order_book_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3247">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3248" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3283" IndexName="order_book_FKIndex2" IndexKind="1" FKRefDef_Obj_id="3281">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3284" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1844" Tablename="market_account" PrevTableName="Table_13" XPos="280" YPos="663" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="The table encapsulates subject\as holding of a particular security in a period. Note that this table should *ALWAYS* be appended instead of updated, i.e. each time the units of a security changes (i.e. when a trade occurs), a new row should be appended with a new timestamp. " Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="11" >
+<COLUMNS>
+<COLUMN ID="3199" ColName="period_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3190" ColName="market_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3206" ColName="user_id" PrevColName="" Pos="1" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1850" ColName="units" PrevColName="security_holdings" Pos="3" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="3189" />
+<RELATION_END ID="3198" />
+<RELATION_END ID="3202" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="3280" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3199" LengthParam="0" />
+<INDEXCOLUMN idColumn="3190" LengthParam="0" />
+<INDEXCOLUMN idColumn="3206" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3191" IndexName="market_account_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3189">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3190" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3200" IndexName="market_account_FKIndex3" IndexKind="1" FKRefDef_Obj_id="3198">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3199" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3204" IndexName="market_account_FKIndex4" IndexKind="1" FKRefDef_Obj_id="3202">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3206" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1853" Tablename="cash_account" PrevTableName="Table_13" XPos="33" YPos="772" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="The table encapsulates subject\as cash holding in a period. Note that this table should *ALWAYS* be appended instead of updated, i.e. each time the cash holding changes (i.e. a trade occurs), a new row should be appended with a new timestamp. " Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="12" >
+<COLUMNS>
+<COLUMN ID="3212" ColName="period_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3207" ColName="user_id" PrevColName="" Pos="1" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1857" ColName="balance" PrevColName="security_holdings" Pos="3" idDatatype="7" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2128" ColName="payoff" PrevColName="time_stamp" Pos="4" idDatatype="7" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="3192" />
+<RELATION_END ID="3211" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="3276" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3212" LengthParam="0" />
+<INDEXCOLUMN idColumn="3207" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3194" IndexName="cash_account_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3192">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3207" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3213" IndexName="cash_account_FKIndex3" IndexKind="1" FKRefDef_Obj_id="3211">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3212" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1863" Tablename="transaction_book" PrevTableName="Table_17" XPos="804" YPos="351" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="Lists all transactions and assigns ids to them. See Comments to table \Amarket_orders\A for further info." Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="13" >
+<COLUMNS>
+<COLUMN ID="2394" ColName="id" PrevColName="" Pos="2" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1867" ColName="size" PrevColName="offer_units" Pos="2" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3145" ColName="price" PrevColName="" Pos="3" idDatatype="7" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1868" ColName="time_entry" PrevColName="" Pos="3" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="3250" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="2395" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="2394" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1877" Tablename="transaction_side" PrevTableName="Table_17" XPos="753" YPos="40" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="The table encapsulates the parties in a transaction identified by transaction_id. It links to the offer_id, lists units_contributed (units from offer that contributed to transaction) and the role the offer played in the transaction. Offer_type=0|buy; 1|sale. Note that offers listed here are all STANDING OFFERS, as the market order that causes this transaction is listed in the market_orders table. The identity of the transacting parties can be inferred through the offer_id." Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="14" >
+<COLUMNS>
+<COLUMN ID="3259" ColName="transaction_id" PrevColName="" Pos="1" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3258" ColName="order_id" PrevColName="" Pos="1" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2848" ColName="size_contributed" PrevColName="units_contributed" Pos="3" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="3250" />
+<RELATION_END ID="3253" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="3252" IndexName="transaction_constituent_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3250">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3259" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3255" IndexName="transaction_constituent_FKIndex2" IndexKind="1" FKRefDef_Obj_id="3253">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3258" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="2416" Tablename="period_group_assignment" PrevTableName="Table_20" XPos="87" YPos="1047" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="Assigne a role (role_id) to each subject." Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="21" >
+<COLUMNS>
+<COLUMN ID="3228" ColName="period_group_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3226" ColName="user_id" PrevColName="" Pos="1" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="3222" />
+<RELATION_END ID="3227" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="3230" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3228" LengthParam="0" />
+<INDEXCOLUMN idColumn="3226" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3224" IndexName="period_group_assignment_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3222">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3226" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3229" IndexName="period_group_assignment_FKIndex2" IndexKind="1" FKRefDef_Obj_id="3227">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3228" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="2625" Tablename="ticker_tape" PrevTableName="Table_22" XPos="580" YPos="267" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="Lists all \Aevents\A (orders, whether limit or market, and cancelations). Kept separate from \Aoffer_book,\A which contains strictly only the things that the market needs to see. That is, the table \Aticker_tape\A is only written and never read during trading; the \Aoffer_book\A is both written and read. " Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="23" >
+<COLUMNS>
+<COLUMN ID="2627" ColName="id" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3239" ColName="order_book_id" PrevColName="" Pos="1" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2629" ColName="size_changed" PrevColName="units_changed" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2630" ColName="change_type" PrevColName="offer_status" Pos="2" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2631" ColName="time_stamp" PrevColName="" Pos="3" idDatatype="6" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="3238" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="2628" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="2627" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3240" IndexName="ticker_tape_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3238">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3239" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="2864" Tablename="period_group" PrevTableName="Table_26" XPos="493" YPos="835" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="56" >
+<COLUMNS>
+<COLUMN ID="2866" ColName="id" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3219" ColName="period_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2868" ColName="name" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(20)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3153" ColName="bankruptcy_fn" PrevColName="" Pos="2" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3154" ColName="payoff_fn" PrevColName="" Pos="3" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3155" ColName="bankruptcy_cutoff" PrevColName="" Pos="4" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="0" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3156" ColName="addCash" PrevColName="" Pos="5" idDatatype="1" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="3227" />
+<RELATION_START ID="3234" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="3218" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="2867" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="2866" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="3220" IndexName="period_group_FKIndex2" IndexKind="1" FKRefDef_Obj_id="3218">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3219" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="3117" Tablename="session" PrevTableName="Table_13" XPos="29" YPos="59" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\nChunks=2\nChunkSize=64\n" Comments="Top level data object. It defines experimental session which contain a number of periods, separated by some idle time (Variable: timeout_length). (Note: timeout_length differs from time_delay in the table \Aperiods\A in that it is fixed per period.) An experiment can contain one or more sessions. The experimenter can configure a session and save it as a template (is_template). When a session definition is marked as a template, it can then be used as a source to clone new session definitions. The idea here is to eventually have an admin interface from which a list of session definitions can be chosen by an experimenter.  " Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="8" >
+<COLUMNS>
+<COLUMN ID="3118" ColName="id" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3122" ColName="name" PrevColName="" Pos="4" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3119" ColName="num_periods" PrevColName="num_of_markets" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3127" ColName="num_markets" PrevColName="num_securities" Pos="3" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3261" ColName="num_traders" PrevColName="num_subjects" Pos="5" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3262" ColName="num_groups" PrevColName="" Pos="6" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3128" ColName="definition" PrevColName="" Pos="4" idDatatype="30" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3263" ColName="create_time" PrevColName="" Pos="7" idDatatype="14" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="3162" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="3124" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="3118" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+</TABLES>
+<RELATIONS>
+<RELATION ID="3162" RelationName="session_def_instance" Kind="2" SrcTable="3117" DestTable="1755" FKFields="id=session_def_id\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3164" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="18" />
+<RELATION ID="3177" RelationName="session_period" Kind="2" SrcTable="1755" DestTable="1617" FKFields="id=session_instance_id\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3179" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="20" />
+<RELATION ID="3180" RelationName="market_period_rel" Kind="2" SrcTable="1636" DestTable="1655" FKFields="id=market_id\n" FKFieldsComments="\n" relDirection="2" MidOffset="-5" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3183" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="21" />
+<RELATION ID="3184" RelationName="period_market_rel" Kind="2" SrcTable="1617" DestTable="1655" FKFields="id=period_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3186" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="22" />
+<RELATION ID="3189" RelationName="trader_market" Kind="1" SrcTable="1636" DestTable="1844" FKFields="id=market_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3191" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="23" />
+<RELATION ID="3192" RelationName="trader_user_cash" Kind="1" SrcTable="1354" DestTable="1853" FKFields="id=user_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3194" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="24" />
+<RELATION ID="3198" RelationName="trader_period" Kind="1" SrcTable="1617" DestTable="1844" FKFields="id=period_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="-3" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3200" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="26" />
+<RELATION ID="3202" RelationName="trader_user_market" Kind="1" SrcTable="1354" DestTable="1844" FKFields="id=user_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3204" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="27" />
+<RELATION ID="3211" RelationName="trader_period_cash" Kind="1" SrcTable="1617" DestTable="1853" FKFields="id=period_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3213" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="29" />
+<RELATION ID="3218" RelationName="Rel_14" Kind="2" SrcTable="1617" DestTable="2864" FKFields="id=period_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3220" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" />
+<RELATION ID="3222" RelationName="Rel_15" Kind="1" SrcTable="1354" DestTable="2416" FKFields="id=user_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3224" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
+<RELATION ID="3227" RelationName="Rel_16" Kind="1" SrcTable="2864" DestTable="2416" FKFields="id=period_group_id\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3229" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="33" />
+<RELATION ID="3231" RelationName="Rel_17" Kind="1" SrcTable="1655" DestTable="1709" FKFields="id=period_market_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3233" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="34" />
+<RELATION ID="3234" RelationName="Rel_18" Kind="1" SrcTable="2864" DestTable="1709" FKFields="id=period_group_id\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3236" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="35" />
+<RELATION ID="3238" RelationName="Rel_19" Kind="2" SrcTable="1820" DestTable="2625" FKFields="id=order_book_id\n" FKFieldsComments="\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3240" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="36" />
+<RELATION ID="3167" RelationName="session_market" Kind="2" SrcTable="1755" DestTable="1636" FKFields="id=session_instance_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3246" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="19" />
+<RELATION ID="3247" RelationName="Rel_22" Kind="2" SrcTable="1655" DestTable="1820" FKFields="id=period_market_id\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3249" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="34" />
+<RELATION ID="3250" RelationName="Rel_23" Kind="2" SrcTable="1863" DestTable="1877" FKFields="id=transaction_id\n" FKFieldsComments="\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3252" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="35" />
+<RELATION ID="3253" RelationName="Rel_24" Kind="2" SrcTable="1820" DestTable="1877" FKFields="id=order_id\n" FKFieldsComments="\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3255" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="36" />
+<RELATION ID="3281" RelationName="Rel_20" Kind="2" SrcTable="1354" DestTable="1820" FKFields="id=user_id\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3283" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="36" />
+</RELATIONS>
+<NOTES>
+</NOTES>
+<IMAGES>
+</IMAGES>
+</METADATA>
+<PLUGINDATA>
+<PLUGINDATARECORDS>
+</PLUGINDATARECORDS>
+</PLUGINDATA>
+<QUERYDATA>
+<QUERYRECORDS>
+</QUERYRECORDS>
+</QUERYDATA>
+<LINKEDMODELS>
+</LINKEDMODELS>
+</DBMODEL>

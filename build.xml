@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<project name="jMarkets2" default="default" basedir=".">
+    <description>Builds, tests, and runs the project jMarkets2.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <import file="nbproject/profiler-build-impl.xml"/>
+    <import file="nbproject/profiler-build-impl.xml"/>
+    <!--
+
+    There exist several targets which are by default empty and which can be 
+    used for execution of your tasks. These targets are usually executed 
+    before and after some main targets. They are: 
+
+    -pre-init:                 called before initialization of project properties 
+    -post-init:                called after initialization of project properties 
+    -pre-compile:              called before javac compilation 
+    -post-compile:             called after javac compilation 
+    -pre-compile-single:       called before javac compilation of single file
+    -post-compile-single:      called after javac compilation of single file
+    -pre-compile-test:         called before javac compilation of JUnit tests
+    -post-compile-test:        called after javac compilation of JUnit tests
+    -pre-compile-test-single:  called before javac compilation of single JUnit test
+    -post-compile-test-single: called after javac compilation of single JUunit test
+    -pre-dist:                 called before jar building 
+    -post-dist:                called after jar building 
+    -post-clean:               called after cleaning build products 
+
+    Example of pluging an obfuscator after the compilation could look like 
+
+    <target name="post-compile">
+    <obfuscate>
+    <fileset dir="${build.classes.dir}"/>
+    </obfuscate>
+    </target>
+
+    For list of available properties check the imported 
+    nbproject/build-impl.xml file. 
+
+
+    Other way how to customize the build is by overriding existing main targets.
+    The target of interest are: 
+
+    init-macrodef-javac:    defines macro for javac compilation
+    init-macrodef-junit:   defines macro for junit execution
+    init-macrodef-debug:    defines macro for class debugging
+    do-dist:                jar archive building
+    run:                    execution of project 
+    javadoc-build:          javadoc generation 
+
+    Example of overriding the target for project execution could look like 
+
+    <target name="run" depends="<PROJNAME>-impl.jar">
+    <exec dir="bin" executable="launcher.exe">
+    <arg file="${dist.jar}"/>
+    </exec>
+    </target>
+
+    Notice that overridden target depends on jar target and not only on 
+    compile target as regular run target does. Again, for list of available 
+    properties which you can use check the target you are overriding in 
+    nbproject/build-impl.xml file. 
+
+    -->
+<property name="compile.jsps">false</property>
+    <target name="-pre-compile">
+        <copy todir="${build.classes.dir}">
+            <fileset dir="${conf.dir}" includes="*.properties" />
+        </copy>
+    </target>
+    <target name="-post-compile">
+        <property name="package" value="edu.caltechUcla.sselCassel.projects.jMarkets."/>
+        
+        <rmic base="${build.classes.dir}" classname="${package}server.network.GUITunnel">
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+         </rmic>
+        <rmic base="${build.classes.dir}" classname="${package}server.network.RMIMonitorReceiver">
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </rmic>
+    </target>
+    
+    <target name="-pre-dist" depends="compile">
+        <tstamp/>
+        <mkdir dir="${build.lib}"/>
+        <jar basedir="${build.classes.dir}" excludes="**/test/**" includes="**/client/**,**/shared/**" jarfile="${build.lib}/${proj.name}-client.jar">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Built-Time" value="${TODAY}"/>
+            </manifest>
+        </jar>
+        <jar basedir="${build.classes.dir}" excludes="**/test/**" includes="**/frontdesk/**,**/shared/**" jarfile="${build.lib}/${proj.name}-frontdesk.jar">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Built-Time" value="${TODAY}"/>
+            </manifest>
+        </jar>
+        <jar basedir="${build.classes.dir}" excludes="**/test/**,**/client/**" jarfile="${build.lib}/${proj.name}-server.jar">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Built-Time" value="${TODAY}"/>
+            </manifest>
+        </jar>
+        <jar basedir="${build.classes.dir}" includes="edu/caltechUcla/sselCassel/projects/jMarkets/server/control/*.class, edu/caltechUcla/sselCassel/projects/jMarkets/shared/data/*.class, edu/caltechUcla/sselCassel/projects/jMarkets/shared/network/*.class, edu/caltechUcla/sselCassel/projects/jMarkets/shared/*.class, edu/caltechUcla/sselCassel/projects/jMarkets/shared/interfaces/*.class, edu/caltechUcla/sselCassel/projects/jMarkets/server/interfaces/*.class, edu/caltechUcla/sselCassel/projects/jMarkets/server/network/*.class" jarfile="${build.lib}/${proj.name}-server-interface.jar">
+           <manifest>
+               <attribute name="Built-By" value="${user.name}"/>
+               <attribute name="Built-Time" value="${TODAY}"/>
+           </manifest>
+        </jar>
+        
+        <delete file="${build.lib}/server-key"/> 
+        
+        <genkey alias="JMarkets Software" keystore="${build.lib}/server-key" storepass="zippyzippy">
+            <dname>
+                <param name="CN" value="California Institute of Technology"/> 
+                <param name="OU" value="Social Science Experimental Laboratory"/> 
+                <param name="O" value="ssel.caltech.edu"/> 
+                <param name="C" value="US"/> 
+            </dname>
+        </genkey>
+        
+        <signjar alias="JMarkets Software" jar="${build.lib}/${proj.name}-server-interface.jar" keystore="${build.lib}/server-key" storepass="zippyzippy"/> 
+        
+        <copy todir="${build.web.dir.real}/./">
+            <fileset dir="${build.lib}" includes="*client.jar, *interface.jar"/>
+        </copy>
+        <copy todir="${build.web.dir.real}/WEB-INF/lib/">
+            <fileset dir="${build.lib}" includes="*server.jar, *frontdesk.jar"/>
+        </copy>
+    </target>
+
+</project>

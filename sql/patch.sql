@@ -1,0 +1,1 @@
+alter table subject_groups add column subject_num int null;
