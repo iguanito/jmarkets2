@@ -31,6 +31,8 @@ package edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions;
 
 import edu.caltechUcla.sselCassel.projects.jMarkets.server.control.ControlServ;
 import edu.caltechUcla.sselCassel.projects.jMarkets.shared.JMConstants;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Locale;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -102,8 +104,10 @@ public final class SaveExpRegAction extends JMarketsAction {
         String school = (String) regForm.get("school");
         String password = (String) regForm.get("password");
         
+        String date = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
+        
         String query = "insert into jm_user values(0,'" + email + "','" + fname + "','" 
-                    + lname + "','" + phone + "',PASSWORD('" + password + "'), 'none', 0, 0, 0," + JMConstants.EXPERIMENTER_ROLE + " )";
+                    + lname + "','" + phone + "',PASSWORD('" + password + "'), 'none', '" + date + "', 0, 0," + JMConstants.EXPERIMENTER_ROLE + " )";
 
         int expId = ControlServ.dbw.registerSubject(query);
         
