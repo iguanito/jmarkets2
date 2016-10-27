@@ -13,13 +13,12 @@
   <tr><td colspan="2"><html:errors/></td></tr>
 </table>
 
-<table border="1">
+<table border="1" width="315">
   <tr>
-    <td align="right" width='25%'>
+    <td align="right">
       <bean:message key="exp.reg.email"/>: 
     </td>
-    <td><html:text property="email"/></td>
-    <td></td>
+    <td><html:text property="email" size=""/></td>
   </tr>
 
   <tr>
@@ -27,7 +26,6 @@
       <bean:message key="exp.reg.fname"/>:
     </td>
     <td><html:text property="fname"/></td>
-      <td></td>
   </tr>
 
   <tr>
@@ -35,7 +33,6 @@
       <bean:message key="exp.reg.lname"/>:
     </td>
     <td><html:text property="lname"/></td>
-      <td></td>
   </tr>
 
   <tr>
@@ -43,7 +40,6 @@
       <bean:message key="exp.reg.phone"/>:
     </td>
     <td><html:text property="phone"/></td>
-      <td></td>
   </tr>
 
   <tr>
@@ -51,7 +47,6 @@
       <bean:message key="exp.reg.school"/>:
     </td>
     <td><html:text property="school"/></td>
-      <td></td>
   </tr>
 
   <tr>
@@ -59,24 +54,16 @@
       <bean:message key="exp.reg.password"/>:
     </td>
     <td><html:password property="password"/></td>
-       <td></td>
   </tr>
-
-  <tr><td colspan='3' height='10'/></tr>
   <tr>
- 
     <td align="center" colspan='2'>
       <html:reset value="Reset"/>
       <html:cancel value="Cancel"/>
       <html:submit value="Submit"/>
     </td>
-    <td></td>
   </tr>
 </table>
 
 </div>
 
 </html:form>
-
-
-<html:javascript formName="expRegForm"/>
