@@ -10,11 +10,11 @@ ENGINE=InnoDB;
 
 CREATE TABLE jm_user (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  email VARCHAR(255) NOT NULL,
-  fname VARCHAR(255) NOT NULL,
-  lname VARCHAR(255) NOT NULL,
-  phone VARCHAR(255) NULL,
-  passwd VARCHAR(255) NOT NULL,
+  email VARCHAR(45) NOT NULL,
+  fname VARCHAR(20) NOT NULL,
+  lname VARCHAR(45) NOT NULL,
+  phone VARCHAR(20) NULL,
+  passwd VARCHAR(45) NOT NULL,
   comments VARCHAR(255) NULL,
   regdate DATE NOT NULL,
   uid VARCHAR(45) NULL,
@@ -37,10 +37,10 @@ CREATE TABLE offer_book (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   subject_id BIGINT UNSIGNED NOT NULL,
   pricelevel_id INTEGER UNSIGNED NOT NULL,
-  offer_ENGINE TINYINT UNSIGNED NOT NULL,
+  offer_type TINYINT UNSIGNED NOT NULL,
   offer_units INTEGER UNSIGNED NOT NULL,
   offer_status VARCHAR(20) NOT NULL DEFAULT 0,
-  entry_ENGINE VARCHAR(20) NOT NULL,
+  entry_type VARCHAR(20) NOT NULL,
   time_entry BIGINT UNSIGNED NOT NULL,
   time_changestatus BIGINT UNSIGNED NULL,
   PRIMARY KEY(id),
@@ -52,7 +52,7 @@ ENGINE=InnoDB;
 CREATE TABLE periods (
   session_id INTEGER UNSIGNED NOT NULL,
   period_id INTEGER UNSIGNED NOT NULL,
-  market_ENGINE VARCHAR(20) NOT NULL,
+  market_type VARCHAR(20) NOT NULL,
   duration BIGINT UNSIGNED NOT NULL,
   open_delay BIGINT UNSIGNED NOT NULL DEFAULT 0,
   start_time DATETIME NULL,
@@ -176,7 +176,6 @@ CREATE TABLE subject_groups (
   period_id INTEGER UNSIGNED NOT NULL,
   subject_id BIGINT UNSIGNED NOT NULL,
   group_id INTEGER UNSIGNED NOT NULL,
-  subject_num INTEGER UNSIGNED,
   INDEX subject_roles_FKIndex1(subject_id),
   INDEX subject_roles_FKIndex2(session_id, period_id),
   UNIQUE INDEX subject_roles_PK2743(session_id, period_id, subject_id),
@@ -230,12 +229,11 @@ ENGINE=InnoDB;
 CREATE TABLE transaction_sides (
   transaction_id INTEGER UNSIGNED NOT NULL,
   offer_id BIGINT UNSIGNED NOT NULL,
-  offer_ENGINE TINYINT UNSIGNED NOT NULL DEFAULT 0,
+  offer_type TINYINT UNSIGNED NOT NULL DEFAULT 0,
   units_contributed INTEGER UNSIGNED NOT NULL,
   UNIQUE INDEX transaction_parties_index2411(transaction_id, offer_id),
   INDEX transaction_parties_FKIndex2(transaction_id),
   INDEX transaction_sides_FKIndex2(offer_id)
 )
 ENGINE=InnoDB;
-
 
