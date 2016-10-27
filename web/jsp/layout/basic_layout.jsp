@@ -2,7 +2,7 @@
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 <%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
-<html:html locale="true">
+<html:html locale="false">
 <head>
 <title><tiles:getAsString name="title"/></title>
 <LINK rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/jMarkets.css">
