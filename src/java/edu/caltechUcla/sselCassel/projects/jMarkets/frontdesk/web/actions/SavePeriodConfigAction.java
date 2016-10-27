@@ -29,24 +29,33 @@
 
 package edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions;
 
-import java.util.Locale;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.util.MessageResources;
-import java.util.*;
-import java.io.*;
-
-import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.forms.*;
-import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.*;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.JMConstants;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.ActionMessages;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.BankruptcyBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.BankruptcyFunctionBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.GroupBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.GroupPeriodBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.PayoffBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.PayoffFunctionBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.PeriodBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.SecurityPeriodBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.SessionBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.data.SubjectPeriodBean;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.forms.PeriodConfigForm;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.JMConstants;
 
 /**
  * @author Walter M. Yuan
@@ -61,8 +70,6 @@ public final class SavePeriodConfigAction extends JMarketsLookupDispatchAction {
      *  the next period */
     public ActionForward next(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // Extract attributes and parameters we will need
-        Locale locale = getLocale(request);
-        MessageResources messages = getResources(request);
         HttpSession session = request.getSession();
         
         // Validate the transactional control token
@@ -97,8 +104,6 @@ public final class SavePeriodConfigAction extends JMarketsLookupDispatchAction {
      *  the previous period */
     public ActionForward prev(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // Extract attributes and parameters we will need
-        Locale locale = getLocale(request);
-        MessageResources messages = getResources(request);
         HttpSession session = request.getSession();
         
         // Validate the transactional control token
@@ -131,8 +136,6 @@ public final class SavePeriodConfigAction extends JMarketsLookupDispatchAction {
     
     public ActionForward done(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // Extract attributes and parameters we will need
-        Locale locale = getLocale(request);
-        MessageResources messages = getResources(request);
         HttpSession session = request.getSession();
         
         // Validate the transactional control token
@@ -166,8 +169,6 @@ public final class SavePeriodConfigAction extends JMarketsLookupDispatchAction {
     
     public ActionForward save(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // Extract attributes and parameters we will need
-        Locale locale = getLocale(request);
-        MessageResources messages = getResources(request);
         HttpSession session = request.getSession();
         
         // Validate the transactional control token
@@ -200,8 +201,6 @@ public final class SavePeriodConfigAction extends JMarketsLookupDispatchAction {
     
     public ActionForward copy(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // Extract attributes and parameters we will need
-        Locale locale = getLocale(request);
-        MessageResources messages = getResources(request);
         HttpSession session = request.getSession();
         
         // Validate the transactional control token

@@ -29,23 +29,18 @@
 
 package edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions;
 
-import javax.sql.DataSource;
-import java.util.Locale;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.util.MessageResources;
-
-import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.forms.*;
-
-import edu.caltechUcla.sselCassel.projects.jMarkets.output.*;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
+import edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.forms.OutputWriterForm;
+import edu.caltechUcla.sselCassel.projects.jMarkets.output.OutputWriter;
 
 /**
  * @author Walter M. Yuan
@@ -88,8 +83,6 @@ public final class SaveOutputWriterAction extends JMarketsAction {
     throws Exception {
         
         // Extract attributes and parameters we will need
-        Locale locale = getLocale(request);
-        MessageResources messages = getResources(request);
         HttpSession session = request.getSession();
         
         // Validate the transactional control token

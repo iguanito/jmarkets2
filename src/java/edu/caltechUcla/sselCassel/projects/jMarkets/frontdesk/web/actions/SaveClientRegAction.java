@@ -85,8 +85,6 @@ public final class SaveClientRegAction extends JMarketsAction {
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
         
         // Extract attributes we will need
-        Locale locale = getLocale(request);
-        MessageResources messages = getResources(request);
         HttpSession session = request.getSession();
         
         if ("request".equals(mapping.getScope())){

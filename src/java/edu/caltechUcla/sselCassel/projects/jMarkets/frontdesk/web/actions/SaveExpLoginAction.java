@@ -29,12 +29,9 @@
 
 package edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions;
 
-import edu.caltechUcla.sselCassel.projects.jMarkets.server.control.ControlServ;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.JMConstants;
-import java.util.Locale;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.ActionForm;
@@ -42,8 +39,9 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
-import org.apache.struts.util.MessageResources;
-import org.apache.struts.validator.*;
+import org.apache.struts.validator.DynaValidatorForm;
+import edu.caltechUcla.sselCassel.projects.jMarkets.server.control.ControlServ;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.JMConstants;
 
 /**
  *
@@ -83,8 +81,6 @@ public final class SaveExpLoginAction extends JMarketsAction {
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
         
         // Extract attributes we will need
-        Locale locale = getLocale(request);
-        MessageResources messages = getResources(request);
         HttpSession session = request.getSession();
         
         if ("request".equals(mapping.getScope())){

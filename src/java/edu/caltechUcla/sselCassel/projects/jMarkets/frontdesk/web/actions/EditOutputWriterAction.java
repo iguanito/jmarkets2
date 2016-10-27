@@ -32,7 +32,6 @@ package edu.caltechUcla.sselCassel.projects.jMarkets.frontdesk.web.actions;
 import edu.caltechUcla.sselCassel.projects.jMarkets.server.control.ControlServ;
 import edu.caltechUcla.sselCassel.projects.jMarkets.shared.JMConstants;
 import java.util.List;
-import java.util.Locale;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
@@ -42,7 +41,6 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.util.LabelValueBean;
-import org.apache.struts.util.MessageResources;
 
 /**
  * @author Walter M. Yuan
@@ -85,8 +83,6 @@ public final class EditOutputWriterAction extends JMarketsAction {
             throws Exception {
         
         // Extract attributes and parameters we will need
-        Locale locale = getLocale(request);
-        MessageResources messages = getResources(request);
         HttpSession session = request.getSession();
         
         if ("request".equals(mapping.getScope())){
