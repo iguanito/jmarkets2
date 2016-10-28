@@ -54,15 +54,17 @@ public class CSVFormatter implements OutputFormatter {
             sb.append(headers[i]).append(separator);
         sb.append(headers[headers.length - 1]);
         sb.append(newline);
-        
-        for (int i=0; i<data.length; i++) {
-            for (int j=0; j<data[i].length - 1; j++) {
-                sb.append(data[i][j]).append(separator);
+
+        if(data != null){
+            for (String[] aData : data) {
+                for (int j = 0; j < aData.length - 1; j++) {
+                    sb.append(aData[j]).append(separator);
+                }
+                sb.append(aData[aData.length - 1]);
+                sb.append(newline);
             }
-            sb.append(data[i][data[i].length - 1]);
-            sb.append(newline);
         }
-            
+
         return sb.toString();
     }
 }
