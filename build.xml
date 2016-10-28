@@ -118,7 +118,7 @@
         
         <delete file="${build.lib}/server-key"/> 
         
-        <!--<genkey alias="JMarkets Software" keystore="${build.lib}/server-key" storepass="zippyzippy">
+        <genkey alias="JMarkets Software" keystore="${build.lib}/server-key" storepass="zippyzippy" validity="3650">
             <dname>
                 <param name="CN" value="California Institute of Technology"/> 
                 <param name="OU" value="Social Science Experimental Laboratory"/> 
@@ -127,7 +127,11 @@
             </dname>
         </genkey>
         
-        <signjar alias="JMarkets Software" jar="${build.lib}/${proj.name}-server-interface.jar" keystore="${build.lib}/server-key" storepass="zippyzippy"/>-->
+        <signjar alias="JMarkets Software" 
+                 jar="${build.lib}/${proj.name}-server-interface.jar" 
+                 keystore="${build.lib}/server-key"
+                 tsaurl="http://tsa.starfieldtech.com" 
+                 storepass="zippyzippy"/>
         
         <copy todir="${build.web.dir.real}/./">
             <fileset dir="${build.lib}" includes="*client.jar, *interface.jar"/>
