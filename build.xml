@@ -120,14 +120,14 @@
         
         <genkey alias="JMarkets Software" keystore="${build.lib}/server-key" storepass="zippyzippy" validity="3650">
             <dname>
-                <param name="CN" value="California Institute of Technology"/> 
+                <param name="CN" value="California Institute of Technology"/>
                 <param name="OU" value="Social Science Experimental Laboratory"/> 
                 <param name="O" value="ssel.caltech.edu"/> 
                 <param name="C" value="US"/> 
             </dname>
         </genkey>
         
-        <signjar alias="JMarkets Software" 
+        <signjar alias="JMarkets Software"
                  jar="${build.lib}/${proj.name}-server-interface.jar" 
                  keystore="${build.lib}/server-key"
                  tsaurl="http://tsa.starfieldtech.com" 
