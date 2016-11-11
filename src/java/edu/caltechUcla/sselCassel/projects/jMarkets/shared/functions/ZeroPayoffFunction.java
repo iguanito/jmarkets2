@@ -40,10 +40,10 @@ import edu.caltechUcla.sselCassel.projects.jMarkets.client.functions.*;
  *
  * @author  Rajeev Advani
  */
-public class ZeroPayoffBLAHFunction implements PayoffFunction {
+public class ZeroPayoffFunction implements PayoffFunction {
     
     /** Creates a new instance of TestPayoff */
-    public ZeroPayoffBLAHFunction() {
+    public ZeroPayoffFunction() {
     }
     
     public String[] getFields() {
@@ -52,7 +52,7 @@ public class ZeroPayoffBLAHFunction implements PayoffFunction {
     }
     
     public String getName() {
-        return "Zero Payoff blah";
+        return "Zero Payoff";
     }
     
     public float getPayoff(int subject, int period, SessionDef session, Trader[][] traders) {

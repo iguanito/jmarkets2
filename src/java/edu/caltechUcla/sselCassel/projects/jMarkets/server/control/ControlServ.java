@@ -30,23 +30,30 @@
 package edu.caltechUcla.sselCassel.projects.jMarkets.server.control;
 
 
-import edu.caltechUcla.sselCassel.projects.jMarkets.server.data.*;
-import edu.caltechUcla.sselCassel.projects.jMarkets.server.updates.*;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.JMConstants;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.*;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.functions.*;
-import edu.caltechUcla.sselCassel.projects.jMarkets.server.network.*;
-import java.sql.*;
-import java.util.*;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.model.earningstable.EarningsInfo;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.model.earningstable.EarningsRow;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.SubjectDef;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.GroupDef;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.PeriodDef;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.SessionDef;
-import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.MarketDef;
+import java.sql.SQLException;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Properties;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import edu.caltechUcla.sselCassel.projects.jMarkets.server.data.DBConnector;
+import edu.caltechUcla.sselCassel.projects.jMarkets.server.data.DBWriter;
+import edu.caltechUcla.sselCassel.projects.jMarkets.server.data.SessionState;
+import edu.caltechUcla.sselCassel.projects.jMarkets.server.network.MonitorTransmitter;
+import edu.caltechUcla.sselCassel.projects.jMarkets.server.updates.AuthUpdate;
+import edu.caltechUcla.sselCassel.projects.jMarkets.server.updates.NewPeriodUpdate;
+import edu.caltechUcla.sselCassel.projects.jMarkets.server.updates.PayoffUpdate;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.JMConstants;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.SessionIdentifier;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.Trader;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.GroupDef;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.MarketDef;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.PeriodDef;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.SessionDef;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.def.SubjectDef;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.model.earningstable.EarningsInfo;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.data.model.earningstable.EarningsRow;
+import edu.caltechUcla.sselCassel.projects.jMarkets.shared.functions.PayoffFunction;
 
 /**
  *
@@ -73,7 +80,6 @@ public class ControlServ implements Controller {
     public synchronized int startNewSession(String name, int numClients, int updateTime, SessionDef sessionInfo) {
         SessionState sessionState = createSession(name, numClients, updateTime, sessionInfo);
         int sessionId = dbw.writeSession(name, numClients, sessionInfo);
-        
         sessionStates.put(new Integer(sessionId), sessionState);
         return sessionId;
     }
